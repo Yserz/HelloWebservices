@@ -4,7 +4,6 @@
  */
 package de.fhb.hellowebservices.manager;
 
-import de.fhb.hellowebservices.HelloManagerRemote;
 import de.fhb.hellowebservices.util.logging.ManagerLoggerInterceptor;
 import javax.ejb.Stateless;
 import javax.ejb.TransactionAttribute;
@@ -19,7 +18,7 @@ import javax.interceptor.Interceptors;
 @Stateless
 @Interceptors(ManagerLoggerInterceptor.class)
 @TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
-public class HelloManager implements HelloManagerRemote, HelloManagerLocal {
+public class HelloManager implements HelloManagerLocal {
 
 	@Override
 	public String helloWorld(String name, String nameTwo) {
